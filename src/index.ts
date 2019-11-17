@@ -1,5 +1,4 @@
 require('dotenv').config()
-import mongoose, { ConnectionOptions } from 'mongoose'
 import cookieParser from 'cookie-parser'
 import envalid, { str } from 'envalid'
 import express from 'express'
@@ -7,11 +6,15 @@ import signale from 'signale'
 import path from 'path'
 
 import { apiRouter, coreRouter } from './routes'
+import { initMongoose } from './utils'
 
 envalid.cleanEnv(process.env, {
   MONGO_URI: str(),
   NEWS_API_KEY: str(),
-  DIALOGFLOW_API_KEY: str()
+  DIALOGFLOW_API_KEY: str(),
+  TWILIO_ACC_SID: str(),
+  TWILIO_AUTH_TOKEN: str(),
+  TWILIO_NOTIFY_SID: str()
 })
 
 const app = express()
@@ -29,6 +32,4 @@ app.listen(port, () => {
   signale.start(`App listening on port ${port}`)
 })
 
-const mongoConfig: ConnectionOptions = { useCreateIndex: true, useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true }
-mongoose.connect(process.env.MONGO_URI!, mongoConfig)
-  .then(() => { signale.start('Successfully connected to mongo!') })
+initMongoose()

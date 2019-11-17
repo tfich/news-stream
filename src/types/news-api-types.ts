@@ -8,6 +8,29 @@ export const validCategories = [
   'technology'
 ]
 
+export interface INewsAPIResponse {
+  status: string
+  totalResults: number
+  articles: INewsAPIArticle[]
+}
+
+interface INewsAPIArticle {
+  source: INewsAPISource
+  author: null | string
+  title: string
+  description: string
+  url: string
+  urlToImage: string
+  publishedAt: Date
+  content: string
+}
+
+interface INewsAPISource {
+  id: null
+  name: string
+}
+
+
 export type TNewsApiCategory =
   'business' |
   'entertainment' |

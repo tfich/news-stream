@@ -1,6 +1,10 @@
 import { UserModel } from '../models/user-model'
 import { TNewsApiCountry, TNewsApiCategory } from '../types'
 
+export async function getAllUsers() {
+  return await UserModel.find().exec()
+}
+
 export async function createUser(number: string, country: TNewsApiCountry) {
   return await UserModel.create({ number, country })
 }
