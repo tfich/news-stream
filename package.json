@@ -1,0 +1,37 @@
+{
+  "name": "atoms-bits",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "",
+    "build": "tsc .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tfich/atoms-bits.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tfich/atoms-bits/issues"
+  },
+  "homepage": "https://github.com/tfich/atoms-bits#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "envalid": "^6.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.11",
+    "request-promise": "^4.2.5",
+    "signale": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.2",
+    "@types/express": "^4.17.2",
+    "@types/mongoose": "^5.5.32",
+    "@types/request-promise": "^4.1.44",
+    "@types/signale": "^1.2.1"
+  }
+}
