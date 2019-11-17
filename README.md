@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://newsstream.us/"><img src="https://middle.pngfans.com/20190620/cg/mobile-message-icon-png-sms-text-messaging-clipart-067faff5a52bc4a0.jpg" alt="Logo" width="200"></a>
+  <a href="https://newsstream.us/"><img src="https://i.imgur.com/ysr4y9x.jpg" alt="Logo" width="200"></a>
   <br>News Stream<br>
 </h1>
 
@@ -23,7 +23,9 @@ News Stream is a daily news delivery service that brings relevant and personaliz
 - [Twilio](https://twilio.com) - SMS messaging API used in conjunction with Dialogflow.
 
 ## Usage
-To be added... 
+Simply text 'Subscribe' to (650) 297-0948 or scan the QR Code below to begin the setup process.
+
+<img src="https://i.imgur.com/lQwoqv0.png" alt="Logo" width="200">
 
 ## The Team
 **[Tyler](https://github.com/tfich)** - Backend & Ideas/Execution
