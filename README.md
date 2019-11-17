@@ -25,7 +25,11 @@ News Stream is a daily news delivery service that brings relevant and personaliz
 ## Usage
 Simply text 'Subscribe' to (650) 297-0948 or scan the QR Code below to begin the setup process.
 
-<img src="https://i.imgur.com/lQwoqv0.png" alt="Logo" width="200">
+<img src="https://i.imgur.com/lQwoqv0.png" alt="QRCode" width="200">
+
+## Screenshots
+
+<img src="https://i.imgur.com/Yu6rRdQ.png" alt="Logo" width="400"> <img src="https://i.imgur.com/EUGsX11.png" alt="Logo" width="400">
 
 ## The Team
 **[Tyler](https://github.com/tfich)** - Backend & Ideas/Execution
