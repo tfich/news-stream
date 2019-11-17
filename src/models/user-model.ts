@@ -10,7 +10,7 @@ export interface User extends Document {
 
 const UserSchema = new Schema({
   number: String,
-  country: { type: String, default: null },
+  country: String,
   categories: { type: [String], default: null },
 })
 

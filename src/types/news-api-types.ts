@@ -1,3 +1,13 @@
+export const validCategories = [
+  'business',
+  'entertainment',
+  'general',
+  'health',
+  'science',
+  'sports',
+  'technology'
+]
+
 export type TNewsApiCategory =
   'business' |
   'entertainment' |
