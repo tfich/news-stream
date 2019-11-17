@@ -14,7 +14,7 @@
 </p>
 
 ## About
-News Stream is a daily news delivery service that brings relavent and personalized news to you via SMS. This project was created over 18 hours as a part of the [Atoms & Bits](http://www.atomsbits.org/) hackathon.
+News Stream is a daily news delivery service that brings relevant and personalized news to you via SMS. This project was created over 18 hours as a part of the [Atoms & Bits](http://www.atomsbits.org/) hackathon.
 
 ## Technologies Used
 - [Heroku](https://heroku.com) - This project is currently hosted on a single Hobby sized dyno.

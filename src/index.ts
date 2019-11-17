@@ -24,7 +24,6 @@ app.use(express.static(path.join(__dirname, '../public')))
 app.use('/api', apiRouter)
 app.use('/', coreRouter)
 
-
 const port = process.env.PORT || 3000
 app.listen(port, () => {
   signale.start(`App listening on port ${port}`)

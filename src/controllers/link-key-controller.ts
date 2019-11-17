@@ -12,5 +12,3 @@ export async function getLinkFromKey(key: string) {
   if (!linkKey) { throw new Error(`Could not find link from key ${key}!`) }
   return linkKey.link
 }
-
-// createLinkKey('+14805892651', 'https://paste.tfich.dev')
