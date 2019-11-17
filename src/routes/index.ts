@@ -1,8 +1,11 @@
 import { Router } from 'express'
 import path from 'path'
 
+import { checkDialogflowAuth } from '../utils' 
+import { dialogflowRouter } from './api/dialogflow'
+
 export const apiRouter = Router()
-// apiRouter.use('/dialogflow', checkBackendAuth, userRouter)
+apiRouter.use('/dialogflow', checkDialogflowAuth, dialogflowRouter)
 
 export const coreRouter = Router()
 coreRouter.get('/', (req, res) => {

@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response, Router }  from 'express'
 import { WebhookClient } from 'dialogflow-fulfillment'
 
-const dialogflowRouter = Router()
+export const dialogflowRouter = Router()
 
 dialogflowRouter.post('/', async (request: Request, response: Response, next: NextFunction) => {
   try {
@@ -17,7 +17,7 @@ intentMap.set('Subscribe', handleSubscribe)
 intentMap.set('Fallback', handleFallback)
 
 function handleSubscribe(agent: any) {
-
+  agent.add(`This is a test.`)
 }
 
 function handleFallback(agent: any) {
@@ -26,6 +26,6 @@ function handleFallback(agent: any) {
     // no response because these messages are handled by twilio opt-out
     // throws 500 error since no response but nothing we can do about it and this will rarely ever happen ¯\_(ツ)_/¯
   } else {
-    agent.add(`I'm sorry, I don't understand. I understand phrases such as 'Subscribe', 'Change Region', 'Cancel Sub' and 'Update Billing'.`)
+    agent.add(`I'm sorry, I don't understand. I understand phrases such as 'Subscribe' and 'Change Categories'.`)
   }
 }
