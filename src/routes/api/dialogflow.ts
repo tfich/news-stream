@@ -57,7 +57,8 @@ async function handleInterestResponse(agent: any) {
   const query = agent.query.toLowerCase()
   if (user) {
     const categories = query.split(' ')
-    .map((i: any) => i.replace(',', ''))
+      .map((i: any) => i.replace(',', ''))
+      .map((i: any) => i === 'tech' ? 'technology' : i)
       .filter((c: any) => validCategories.includes(c))
     if (query.includes('remove')) {
       await removeUserCategories(number, categories)
