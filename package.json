@@ -4,9 +4,10 @@
   "description": "",
   "main": "build/index.js",
   "scripts": {
-    "start": "",
-    "build": "tsc .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "build": "tsc -p .",
+    "dev": "npm run build && npm start",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",

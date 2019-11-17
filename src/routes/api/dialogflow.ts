@@ -5,10 +5,10 @@ const dialogflowRouter = Router()
 
 dialogflowRouter.post('/', async (request: Request, response: Response, next: NextFunction) => {
   try {
-      const agent = new WebhookClient({ request, response })
-      await agent.handleRequest(intentMap)
+    const agent = new WebhookClient({ request, response })
+    await agent.handleRequest(intentMap)
   } catch (err) {
-      return next(err)
+    return next(err)
   }
 })
 

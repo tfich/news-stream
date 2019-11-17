@@ -6,6 +6,8 @@ import express from 'express'
 import signale from 'signale'
 import path from 'path'
 
+import { apiRouter, coreRouter } from './routes'
+
 envalid.cleanEnv(process.env, {
   MONGO_URI: str(),
   NEWS_API_KEY: str()
@@ -13,17 +15,20 @@ envalid.cleanEnv(process.env, {
 
 const app = express()
 
+app.use( express.json())
+app.use(express.urlencoded({ extended: false }))
+app.use(cookieParser())
+app.use(express.static(path.join(__dirname, '../public')))
+
+app.use('/api', apiRouter)
+app.use('/', coreRouter)
+
+
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+  signale.start(`App listening on port ${port}`)
+})
+
 const mongoConfig: ConnectionOptions = { useCreateIndex: true, useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true }
 mongoose.connect(process.env.MONGO_URI!, mongoConfig)
   .then(() => { signale.start('Successfully connected to mongo!') })
-
-// database
-
-// {
-//   phone: dsafaw,
-//   categories: [
-//     'sports',
-//     'tech'
-//   ],
-//   location: 'cali'
-// }
