@@ -26,7 +26,7 @@
     "dialogflow-fulfillment": "^0.6.1",
     "dotenv": "^8.2.0",
     "envalid": "^6.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "moment-timezone": "^0.5.26",
     "mongoose": "^5.7.11",
     "request": "^2.88.0",
